@@ -1,0 +1,30 @@
+plugins {
+    id 'org.springframework.boot' version '2.5.2'
+    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+    id 'java'
+    id 'scala'
+}
+
+group = 'com.example'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+apply plugin: "groovy"
+apply plugin: 'io.spring.dependency-management'
+apply plugin: 'org.springframework.boot'
+
+repositories {
+    mavenCentral()
+    maven { url "https://jitpack.io" }
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    implementation 'org.scala-lang:scala-library:2.13.5'
+
+    implementation 'com.google.guava:guava:30.1-jre'
+    implementation 'com.github.sbesada:java.math.expression.parser:v3.3.0'
+
+    testImplementation 'junit:junit:4.13.2'
+}
