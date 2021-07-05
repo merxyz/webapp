@@ -6,6 +6,7 @@ COPY gradle gradle
 COPY build.gradle .
 RUN ./gradlew dependencies
 COPY . .
+RUN ./gradlew build
 RUN mkdir -p build/dependency && (cd build/dependency; jar -xf ../libs/*.jar)
 
 FROM openjdk:8-jre-slim
