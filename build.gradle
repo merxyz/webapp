@@ -3,6 +3,7 @@ plugins {
     id 'io.spring.dependency-management' version '1.0.11.RELEASE'
     id 'java'
     id 'scala'
+    id "com.heroku.sdk.heroku-gradle" version "2.0.0"
 }
 
 group = 'com.example'
