@@ -9,6 +9,5 @@ before_install:
   - docker build -t userbox/webapp -f Dockerfile .
 
 script:
-  - gw clean
-  - gw test
+  - ./gradlew clean build --parallel
 
