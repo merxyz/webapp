@@ -1,5 +1,4 @@
 # .travis.yml
-sudo: required
 language: java
 jdk:
   - openjdk8
@@ -7,11 +6,10 @@ services:
   - docker
 
 before_install:
-  - docker build -t userbox/webapp -f Dockerfile .
+  - docker build -t userbox/webapp -f Dockerfile.dev .
 
 script:
-  - ./gradlew clean build --parallel
-  - ./gradlew test
+  - docker run userbox/webapp
 
 deploy:
   provider: heroku
