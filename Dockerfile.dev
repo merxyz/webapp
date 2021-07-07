@@ -1,0 +1,10 @@
+FROM openjdk:8-jdk-alpine as build
+WORKDIR /workspace/app
+
+COPY gradlew .
+COPY gradle gradle
+COPY build.gradle .
+RUN ./gradlew dependencies
+COPY . .
+RUN ./gradlew clean build --parallel
+CMD ["./gradlew", "test"]
