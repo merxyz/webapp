@@ -14,8 +14,9 @@ script:
 
 deploy:
   provider: heroku
+  region: Europe
   api_key:
-    secure: $HEROKU_API_KEY
+    secure: "Knhj3k0zY2yevo41lMRTORuDXt9Z8IqfBIldKqGYzxhlRi9Xt1vDzgVI88d3iy1fi2fZM+jXAjISxtB7xmn0XZDNEBlSiG0rgZHSFyZPFFeGyAr25y27M7Jh74n6N/BqfbbioN/7nNJfHiG11n4ILRwXMRfvzwQczE3Hzesf3ZlsyKnkmfYsA9VKVLywIXEPm71QzEdo1jo/x67SwzG7UTPwwy+D1lmbgHyuNtDlHHvzj4wn+AoSMd8N9VNA7C1cPyTGbrPLiTuZj1MD2AItVbLtw4WOymWqwIRuiNDw8ffRbtSKN4TiTvEX3ODqayRvfEHYb7Wsa6noJmdrA4zN2hE8DQ03/K1YLYswz/xrrB9sKmxN4ApEha1VVJP9ZYpkWbcqJ0lwg0g9FC3+0nhVJp82shBovmkk3luzOgsCLvlD2ZSYWQAtfEKVg2Ml60uz1TWgazunXbRFOZj5SKrltzdy9Fcs/jf331fnzu5jIx9Y6JGOpABV6upQh3uLufc9HZ6Ih6pmgSZntpYebpcVGu9QRsfgHPIuciupb2Lgik0QiLmlPzhcvcA0Z6urGZp/GnOmT8JwRwXqYcykTLd54LNWXzmc6T/9a0I036RjpgEosJqt7a/oPJ6LKWLDhEaXYP6TG1gdLGSa+3zSCNUoathjZua+PMgPL69NPxVXdAE="
   app: simple-web-calculus
   on:
     repo: merxyz/webapp
